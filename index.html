@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bond Beacon</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="main">
+        <nav>
+            <div class="logo">
+                <img src="assets\bond-beacon-logo-nbg.svg">
+            </div>
+            <div class="nav-links">
+                <ul>
+                    <li><a href="#">INVEST</a></li>
+                    <li><a href="#">POSITION</a></li>
+                    <li><a href="#">ADVICE</a></li>
+                </ul>
+            </div>
+        </nav>
+
+        <div class="information">
+            <div class="overlay"></div>
+            <img src="assets\bond-certificate.svg" class="mobile" alt="bond-certificate">
+            <div id="circle">
+                <div class="feature one">
+                    <img src="assets\coupon-rate.svg"  alt="oupon-rate">
+                    <div>
+                        <h1>Coupon Rate</h1>
+                        <p>Fixed Interest Payment > 7%</p>
+                    </div>
+                </div>
+                <div class="feature two">
+                    <img src="assets\yield.svg" alt="yield">
+                    <div>
+                        <h1>Yield</h1>
+                        <p>Tax-Exempt Yield</p>
+                    </div>
+                </div>
+                <div class="feature three">
+                    <img src="assets\credit-rating.svg" alt="assets">
+                    <div>
+                        <h1>Credit Rating</h1>
+                        <p>Investment Grade Rating AAA-BBB</p>
+                    </div>
+                </div>
+                <div class="feature four">
+                    <img src="assets\maturity-date.svg" alt="maturity-date">
+                    <div>
+                        <h1>Maturity Date</h1>
+                        <p>Up to 7 Years and Above</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="controls">
+            <img src="assets\up-arrow.png" id="upBtn">
+            <h3>Features</h3>
+            <img src="assets\up-arrow.png" id="downBtn">
+
+        </div>
+    </div>
+
+    <script>
+        var circle = document.getElementById("circle");
+        var upBtn = document.getElementById("upBtn");
+        var downBtn = document.getElementById("downBtn");
+
+        var rotateValue = circle.style.transform;
+        var rotateSum;
+
+        upBtn.onclick = function() {
+            rotateSum = rotateValue + "rotate(-90deg)";
+            circle.style.transform = rotateSum;
+            rotateValue = rotateSum;
+        }
+        downBtn.onclick = function() {
+            rotateSum = rotateValue + "rotate(90deg)";
+            circle.style.transform = rotateSum;
+            rotateValue = rotateSum;
+        }
+    </script>
+
+
+
+</body>
+
+</html>
