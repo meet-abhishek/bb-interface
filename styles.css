@@ -16,12 +16,11 @@ nav {
     width: 100%;
     position: sticky;
     top: 0;
-    margin: 0 auto;
     z-index: 1;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    background-color: rgba(0, 0, 0, 0.8); /* Add background to improve visibility */
+    background-color: rgba(0, 0, 0, 0.8); /* Improved visibility */
     padding: 10px;
 }
 
@@ -30,7 +29,7 @@ nav {
 }
 
 .logo img {
-    width: 120px; /* Adjusted size for better visibility */
+    width: 120px; /* Adjusted for better visibility */
 }
 
 .nav-links {
@@ -52,11 +51,11 @@ nav {
 .nav-links ul li a {
     color: #fff;
     text-decoration: none;
-    font-size: 16px; /* Adjust font size */
+    font-size: 16px; /* Adjusted for readability */
 }
 
 .information {
-    width: 80vw; /* Adjusted width for better responsiveness */
+    width: 80vw; /* Adjusted width for better fit on mobile */
     height: auto;
     position: absolute;
     top: 50%;
@@ -65,47 +64,35 @@ nav {
 }
 
 #circle {
-    width: 80vw; /* Adjusted size for better responsiveness */
+    width: 80vw; /* Responsive width */
     height: auto;
     position: absolute;
     top: 0;
     left: 0;
     border-radius: 50%;
-    transform: rotate(0deg);
     transition: 1s;
-}
-
-.feature img {
-    width: 50px; /* Adjusted size for better visibility */
+    background: rgba(0, 0, 0, 0.2); /* Optional: Add slight background to improve contrast */
 }
 
 .feature {
     position: absolute;
     display: flex;
-    color: #fff;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     width: 100%;
     height: 100%;
+    color: #fff; /* Ensure text visibility */
+    opacity: 0; /* Hidden by default */
+    transition: opacity 1s ease;
 }
 
-.feature div {
-    margin: 10px;
+.feature.visible {
+    opacity: 1; /* Only visible feature */
 }
 
-.feature div p {
-    margin-top: 8px;
-}
-
-.one, .two, .three, .four {
-    position: absolute;
-    width: 100%; /* Ensure full width */
-    height: 100%; /* Ensure full height */
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: #fff;
+.feature img {
+    width: 50px; /* Adjusted size for better fit */
 }
 
 .one {
@@ -154,7 +141,7 @@ nav {
 }
 
 #upBtn, #downBtn {
-    width: 20px; /* Increased button size for better usability */
+    width: 20px; /* Increased size for easier interaction */
     cursor: pointer;
 }
 
@@ -229,20 +216,14 @@ nav {
     }
 }
 
+/* Adjustments for ensuring visibility and usability */
 @media (min-width: 1080px) and (max-width: 2400px) {
-    .main {
-        background: linear-gradient(to right, #000000, #c0c0c0);
-    }
-
-    nav {
-        width: 90%;
-    }
-
-    .logo img {
-        width: 120px;
-    }
-
-    .nav-links ul li {
-        margin: 0 15px;
+    .feature {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
     }
 }
